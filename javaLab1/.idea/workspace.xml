@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="379cbd4a-2368-4661-822f-587fa1b9612f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab1/com/company/Bus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/com/company/Bus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab1/com/company/BusDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/com/company/BusDriver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab1/com/company/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/com/company/Car.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab1/com/company/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/com/company/Driver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab1/com/company/License.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/com/company/License.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab1/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab1/com/company/Station.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/com/company/Station.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab1/com/company/Taxi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/com/company/Taxi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab1/com/company/TaxiDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/com/company/TaxiDriver.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1Y4vyhiab7IVoJsSr6jb2n2XmEE" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="Lab1" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="379cbd4a-2368-4661-822f-587fa1b9612f" name="Default Changelist" comment="" />
+      <created>1582214937267</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582214937267</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="490" y="270" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1582559747547">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="490" y="270" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.760@0.0.1280.760" timestamp="1582559747547" />
+    <state width="1237" height="190" key="GridCell.Tab.0.bottom" timestamp="1582560026814">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1237" height="190" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1582560026814" />
+    <state width="1237" height="190" key="GridCell.Tab.0.center" timestamp="1582560026814">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1237" height="190" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1582560026814" />
+    <state width="1237" height="190" key="GridCell.Tab.0.left" timestamp="1582560026814">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1237" height="190" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1582560026814" />
+    <state width="1237" height="190" key="GridCell.Tab.0.right" timestamp="1582560026814">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1237" height="190" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1582560026814" />
+    <state x="142" y="23" key="SettingsEditor" timestamp="1582560024483">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="142" y="23" key="SettingsEditor/0.0.1280.760@0.0.1280.760" timestamp="1582560024483" />
+  </component>
+</project>
