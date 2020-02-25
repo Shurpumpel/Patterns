@@ -6,14 +6,15 @@ public class Bus implements Car{
     int maxPassengers = 30;
     BusDriver driver;
 
-    public Bus(){
-        SetDriver();
-    }
-
     //посадка водителя
-    public void SetDriver() {
-        IsDriver = true;
-        driver = BusDriver.sitToCar();
+    public void SetDriver(Driver driver) {
+        if (driver.license == License.DCategory){
+            this.driver = (BusDriver) driver;
+            IsDriver = true;
+        }else {
+            System.out.println("Not this driver");
+            IsDriver = false;
+        }
     }
 
     //посадка пассажира в автобус
@@ -41,5 +42,13 @@ public class Bus implements Car{
 
     public int getMaxPassengersCount(){
         return maxPassengers;
+    }
+
+    public void OutPassenger() {
+        if(PassengersCount>0) {
+            PassengersCount--;
+        }else{
+            System.out.println("there not passenger");
+        }
     }
 }

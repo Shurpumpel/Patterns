@@ -10,7 +10,7 @@ public class Driver {
     private Driver(License lic){
         this.license = lic;
     }
-    public static Driver sitToCar(License lic){
+    public static Driver createDriver(License lic){
         if (instance == null){
             instance = new Driver(lic);
         }

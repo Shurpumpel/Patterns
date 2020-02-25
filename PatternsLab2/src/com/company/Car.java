@@ -7,7 +7,11 @@ public class Car {
     private int priceExempt;
     public Driver carDriver;
     public boolean isDriver = false;
+    public int passengersKids = 0;
+    public int passengersAdults = 0;
+    public int passengersExempts = 0;
     public int passengersInCar = 0;
+
     public boolean carCanMove = false;
     public License needLicense;
 
@@ -27,19 +31,61 @@ public class Car {
         this.priceExempt = p;
     }
 
-    void setDriver(){
-        this.carDriver = Driver.sitToCar(needLicense);
-        this.isDriver= true;
+    void setDriver(Driver driver){
+        if(driver.license == needLicense){
+            this.carDriver = driver;
+            this.isDriver= true;
+        }else{
+            System.out.println("Not this driver");
+            this.isDriver = false;
+        }
     }
 
-    void inPassengerToCar(){
-        this.passengersInCar = this.passengersInCar + 1;
+    void inKidPassengerToCar(){
+        this.passengersKids = this.passengersKids + 1;
+        this.passengersInCar = this.passengersInCar +1;
         setCanCarMove();
     }
 
-    void outPassengersFromCar(){
-        this.passengersInCar = this.passengersInCar-1;
+    void inAdultPassengerToCar(){
+        this.passengersAdults = this.passengersAdults + 1;
+        this.passengersInCar = this.passengersInCar +1;
         setCanCarMove();
+    }
+    void outExemptPassengerToCar(){
+        this.passengersExempts = this.passengersExempts + 1;
+        this.passengersInCar = this.passengersInCar +1;
+        setCanCarMove();
+    }
+
+    void outKidPassengerToCar(){
+        this.passengersKids = this.passengersKids - 1;
+        this.passengersInCar = this.passengersInCar -1;
+        setCanCarMove();
+    }
+
+    void outAdultPassengerToCar(){
+        this.passengersKids = this.passengersKids - 1;
+        this.passengersInCar = this.passengersInCar -1;
+        setCanCarMove();
+    }
+    void inExemptPassengerToCar(){
+        this.passengersExempts = this.passengersExempts - 1;
+        this.passengersInCar = this.passengersInCar -1;
+        setCanCarMove();
+    }
+
+    void sitPassengertoCar(Passenger passenger){
+        if (passenger.type == typeOfPassenger.Adult){
+            this.inAdultPassengerToCar();
+        }
+        if (passenger.type == typeOfPassenger.Kid){
+            this.inKidPassengerToCar();
+        }
+        if (passenger.type == typeOfPassenger.Exempt){
+            this.inExemptPassengerToCar();
+        }
+
     }
 
     void setCanCarMove(){
@@ -54,6 +100,9 @@ public class Car {
         return "MaxCount = " + maxCountPassengers + "\n" +
                 "PassengersInCar = " + passengersInCar + "\n" +
                 "IsDriver = " + isDriver + "\n" +
+                "CountKids = " + passengersKids +"\n" +
+                "CountAdults = " + passengersAdults +"\n" +
+                "CountExempts = " + passengersExempts +"\n" +
                 "CarCanMove = " + carCanMove;
     }
 }
