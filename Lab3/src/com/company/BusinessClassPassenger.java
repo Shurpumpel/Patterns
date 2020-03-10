@@ -3,12 +3,15 @@ package com.company;
 import java.util.ArrayList;
 
 public class BusinessClassPassenger implements Human{
-    ArrayList<Passenger> businessClassPassengers = new ArrayList<>();
-    int maxFreeWeight = 35;
-    int maxCount = 20;
+    private ArrayList<Passenger> businessClassPassengers = new ArrayList<>();
+    private int maxFreeWeight = 35;
+
+    public ArrayList<Passenger> getBusinessClassPassengers(){
+        return businessClassPassengers;
+    }
 
     public void addBusinessClassPassenger(Passenger human){
-        if((businessClassPassengers.size()<=maxCount)&&(human.classOfPassenger.equals(ClassOfPassenger.BusinessClass))){
+        if((human.classOfPassenger.equals(ClassOfPassenger.BusinessClass))){
             businessClassPassengers.add(human);
         }else{
             System.out.println("Error, not added");

@@ -3,56 +3,42 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	    Plane plane = new Plane(150);
+	    Plane plane1 = new Plane(150, 50);
+	    Plane plane2 = new Plane(200, 100);
 
-	    Pilot pilot1 = new Pilot("Vasily");
-        Pilot pilot2 = new Pilot("Gennady");
-
-        Stewardess stewardess1 = new Stewardess("Svetlana");
-        Stewardess stewardess2 = new Stewardess("Galina");
-        Stewardess stewardess3 = new Stewardess("Maria");
-        Stewardess stewardess4 = new Stewardess("Natalia");
-        Stewardess stewardess5 = new Stewardess("Ekaterina");
-        Stewardess stewardess6 = new Stewardess("Olga");
-
-        Passenger passenger1 = new Passenger("Ashot", ClassOfPassenger.FirstClass, 40);
-        Passenger passenger2 = new Passenger("Ashot", ClassOfPassenger.FirstClass, 40);
-        Passenger passenger3 = new Passenger("Ashot", ClassOfPassenger.BusinessClass, 40);
-        Passenger passenger4 = new Passenger("Ashot", ClassOfPassenger.BusinessClass, 40);
-        Passenger passenger5 = new Passenger("Ashot", ClassOfPassenger.EconomyClass, 40);
-        Passenger passenger6 = new Passenger("Ashot", ClassOfPassenger.EconomyClass, 40);
 
 
         FirstClassPassenger firstClassPassenger = new FirstClassPassenger();
         BusinessClassPassenger businessClassPassenger = new BusinessClassPassenger();
         EconomyClassPassenger economyClassPassenger = new EconomyClassPassenger();
 
-        firstClassPassenger.addFirstClassPassenger(passenger1);
-        firstClassPassenger.addFirstClassPassenger(passenger2);
+        for (int i = 0; i < 20; i++) {
+            firstClassPassenger.addFirstClassPassenger(new Passenger("Vasya",
+                    ClassOfPassenger.FirstClass, 15, (i+1)%10));
+        }
 
-        businessClassPassenger.addBusinessClassPassenger(passenger3);
-        businessClassPassenger.addBusinessClassPassenger(passenger4);
+        for (int i = 0; i < 40; i++) {
+            businessClassPassenger.addBusinessClassPassenger(new Passenger("Vasya",
+                    ClassOfPassenger.BusinessClass, 15, (i+1)%20));
+        }
 
-        economyClassPassenger.addEconomyClassPassenger(passenger5);
-        economyClassPassenger.addEconomyClassPassenger(passenger6);
+        for (int i = 0; i < 150; i++) {
+            economyClassPassenger.addEconomyClassPassenger(new Passenger("Vasya",
+                    ClassOfPassenger.EconomyClass, 15, (i+1)%150));
+        }
 
-        plane.addPilot(pilot1);
-        plane.addPilot(pilot2);
-        plane.addStewardess(stewardess1);
-        plane.addStewardess(stewardess2);
-        plane.addStewardess(stewardess3);
-        plane.addStewardess(stewardess4);
-        plane.addStewardess(stewardess5);
-        plane.addStewardess(stewardess6);
-        plane.addPassengers(firstClassPassenger,businessClassPassenger,economyClassPassenger);
+        plane1.addPassengers(firstClassPassenger,businessClassPassenger,economyClassPassenger);
+        plane1.removeLuggage();
+        plane2.addPassengers(firstClassPassenger, businessClassPassenger, economyClassPassenger);
+        plane2.removeLuggage();
 
-        System.out.println(plane);
-        System.out.println(plane.isPlaneReadyToFly());
+        System.out.println("Plane1");
+        System.out.println(plane1);
+        plane1.ShowHuman();
+        System.out.println("\nPlane2");
+        System.out.println(plane2);
+        plane2.ShowHuman();
 
-        plane.removeLuggage();
-        System.out.println(plane);
-        System.out.println(plane.isPlaneReadyToFly());
 
-        plane.ShowHuman();
     }
 }

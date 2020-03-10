@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="379cbd4a-2368-4661-822f-587fa1b9612f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../PatternsLab2/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PatternsLab2/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PatternsLab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PatternsLab2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PatternsLab2/src/com/company/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PatternsLab2/src/com/company/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PatternsLab2/src/com/company/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PatternsLab2/src/com/company/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PatternsLab2/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PatternsLab2/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab1/com/company/Bus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/com/company/Bus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab1/com/company/BusDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/com/company/BusDriver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab1/com/company/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/com/company/Car.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab1/com/company/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/com/company/Driver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab1/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab1/com/company/Station.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/com/company/Station.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab1/com/company/Taxi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/com/company/Taxi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab1/com/company/TaxiDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab1/com/company/TaxiDriver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Bus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/BusDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/BusDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Station.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Station.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Taxi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Taxi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/TaxiDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TaxiDriver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +73,10 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="490" y="270" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.760@0.0.1280.760" timestamp="1582559747547" />
+    <state x="421" y="136" key="FileChooserDialogImpl" timestamp="1582709746995">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="421" y="136" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1582709746995" />
     <state width="1237" height="236" key="GridCell.Tab.0.bottom" timestamp="1582625742481">
       <screen x="0" y="0" width="1280" height="760" />
     </state>

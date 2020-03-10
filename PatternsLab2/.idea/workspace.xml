@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2f546d3-cd86-4dc7-acde-7908944c859c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaLab1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../javaLab1/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaLab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../javaLab1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaLab1/out/production/Lab1/com/company/Bus.class" beforeDir="false" afterPath="$PROJECT_DIR$/../javaLab1/out/production/Lab1/com/company/Bus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaLab1/out/production/Lab1/com/company/BusDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../javaLab1/out/production/Lab1/com/company/BusDriver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaLab1/out/production/Lab1/com/company/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/../javaLab1/out/production/Lab1/com/company/Car.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaLab1/out/production/Lab1/com/company/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../javaLab1/out/production/Lab1/com/company/Driver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaLab1/out/production/Lab1/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../javaLab1/out/production/Lab1/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaLab1/out/production/Lab1/com/company/Station.class" beforeDir="false" afterPath="$PROJECT_DIR$/../javaLab1/out/production/Lab1/com/company/Station.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaLab1/out/production/Lab1/com/company/Taxi.class" beforeDir="false" afterPath="$PROJECT_DIR$/../javaLab1/out/production/Lab1/com/company/Taxi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaLab1/out/production/Lab1/com/company/TaxiDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../javaLab1/out/production/Lab1/com/company/TaxiDriver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaLab1/src/com/company/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/../javaLab1/src/com/company/Bus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaLab1/src/com/company/BusDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../javaLab1/src/com/company/BusDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaLab1/src/com/company/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/../javaLab1/src/com/company/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaLab1/src/com/company/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../javaLab1/src/com/company/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaLab1/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../javaLab1/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaLab1/src/com/company/Station.java" beforeDir="false" afterPath="$PROJECT_DIR$/../javaLab1/src/com/company/Station.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaLab1/src/com/company/Taxi.java" beforeDir="false" afterPath="$PROJECT_DIR$/../javaLab1/src/com/company/Taxi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaLab1/src/com/company/TaxiDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../javaLab1/src/com/company/TaxiDriver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +28,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -110,6 +89,10 @@
     </state>
     <state width="1237" height="190" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1582650938828" />
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582558990400" />
+    <state x="142" y="23" key="SettingsEditor" timestamp="1582709651652">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="142" y="23" key="SettingsEditor/0.0.1280.760@0.0.1280.760" timestamp="1582709651652" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1582551083895">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

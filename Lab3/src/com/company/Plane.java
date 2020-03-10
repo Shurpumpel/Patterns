@@ -6,16 +6,20 @@ public class Plane implements Human{
     private int maxWeight;
     private int maxCountPilot = 2;
     private int maxCountStewardess = 6;
+    private int maxSeat;
 
     private int countPilotsOnBoard = 0;
     private int countStewardessesOnBoard = 0;
     private int countPassengersOnBoard = 0;
 
+    private int countFirstClass = 0;
+    private int countBusinessClass = 0;
+    private int countEconomyClass = 0;
+
     public ArrayList<Human> AllOnBoard = new ArrayList<>();
 
     public ArrayList<Human> removedLuggageHuman = new ArrayList<>();
 
-    //посадить в самолет пилота
     public void addPilot(Pilot pilot){
         countPilotsOnBoard++;
         if (countPilotsOnBoard <=maxCountPilot) {
@@ -25,7 +29,6 @@ public class Plane implements Human{
             System.out.println("Pilots full");
     }
 
-    //посадить в самолет стюардессу
     public void addStewardess(Stewardess stewardess){
         countStewardessesOnBoard++;
         if(countStewardessesOnBoard <=maxCountStewardess) {
@@ -39,18 +42,63 @@ public class Plane implements Human{
     public void addPassengers(FirstClassPassenger firstClassPassenger,
                               BusinessClassPassenger businessClassPassenger,
                               EconomyClassPassenger economyClassPassenger){
-        AllOnBoard.addAll(firstClassPassenger.firstClassPassengers);
-        AllOnBoard.addAll(businessClassPassenger.businessClassPassengers);
-        AllOnBoard.addAll(economyClassPassenger.economyClassPassengers);
+        int i=0;
+        for (Human pass : firstClassPassenger.getFirstClassPassengers()) {
+            if(i==10)
+                break;
+            AllOnBoard.add(pass);
+            countFirstClass++;
+            i++;
+        }
+        for(Human pass : AllOnBoard){
+            if(firstClassPassenger.getFirstClassPassengers().contains(pass))
+                firstClassPassenger.removeFirstClassPassenger(pass);
+        }
+
+        i=0;
+        for (Human pass : businessClassPassenger.getBusinessClassPassengers()) {
+            if(i==20)
+                break;
+            AllOnBoard.add(pass);
+            countBusinessClass++;
+            i++;
+        }
+        for(Human pass : AllOnBoard){
+            if(businessClassPassenger.getBusinessClassPassengers().contains(pass))
+                businessClassPassenger.removeBusinessClassPassenger(pass);
+        }
+
+        i=0;
+        for (Human pass : economyClassPassenger.getEconomyClassPassengers()) {
+            if(i == maxSeat - 30)
+                break;
+            AllOnBoard.add(pass);
+            countEconomyClass++;
+            i++;
+        }
+        for(Human pass : AllOnBoard){
+            if(economyClassPassenger.getEconomyClassPassengers().contains(pass))
+                economyClassPassenger.removeEconomyClassPassenger(pass);
+        }
+
         for(Human pass :AllOnBoard){
             if(pass.getClass()==Passenger.class)
                 countPassengersOnBoard++;
         }
     }
 
+    public void removePassenger(int seat){
+        for(Human pass : AllOnBoard){
+            if((pass instanceof Passenger)&&(((Passenger) pass).seatInPlane==seat)){
+                AllOnBoard.remove(pass);
+            }
+        }
+    }
+
     //конструктор для создания самолета
-    public Plane(int maxWeight){
+    public Plane(int maxWeight, int maxSeat){
         this.maxWeight = maxWeight;
+        this.maxSeat = maxSeat;
     }
 
     //сеттер максимального веса самолета
@@ -104,11 +152,22 @@ public class Plane implements Human{
         str+="Count of pilots: "+ countPilotsOnBoard +"\n"+
                 "Count of stewardesses: "+countStewardessesOnBoard+"\n"+
                 "Count of passengers: "+countPassengersOnBoard+"\n"+
+                "CountFirstClass: " + countFirstClass + "\n"+
+                "CountBusinessClass: " + countBusinessClass + "\n"+
+                "CountEconomyClass: " + countEconomyClass + "\n"+
                 "Overweight: "+getOverWeight()+"\n"+
                 "RemovedLuggageCount: "+removedLuggageHuman.size()+"\n";
         return str;
     }
 
+    public Human findBySeat(int num){
+        for (Human pass : AllOnBoard) {
+            if ((pass instanceof Passenger)&&(((Passenger) pass).seatInPlane == num)){
+                return pass;
+            }
+        }
+        return null;
+    }
 
     @Override
     public void ShowHuman() {
@@ -116,4 +175,5 @@ public class Plane implements Human{
             human.ShowHuman();
         }
     }
+
 }
