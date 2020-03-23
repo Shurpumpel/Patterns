@@ -1,15 +1,12 @@
 package com.company;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class RealImage implements ImageInterface {
     private String file;
-
     public ImageIcon getImage() {
         return image;
     }
-
     private ImageIcon image;
 
     public RealImage(String file) {
@@ -24,6 +21,8 @@ public class RealImage implements ImageInterface {
 
     public void load(){
         System.out.println("Загрузка");
+        image = new ImageIcon(file);
+
     }
 
 }

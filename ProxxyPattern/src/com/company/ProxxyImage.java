@@ -6,6 +6,9 @@ public class ProxxyImage implements ImageInterface {
     private String file;
     private RealImage image;
 
+    public RealImage getImage() {
+        return image;
+    }
     public ProxxyImage(String file) {
         this.file = file;
     }
