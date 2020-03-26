@@ -34,10 +34,11 @@ public class Frame extends JFrame{
                     ImageIcon icon = ((ProxxyImage)image).getImage().getImage();
                     System.out.println("Panel x = " + panel.getX() + " y = " + panel.getY());
                     System.out.println("Label x = " + label.getX() + " y = " + label.getY());
+                    label.setLocation(panel.getLocation());
                     label.setIcon(icon);
                     System.out.println("Panel x = " + panel.getX() + " y = " + panel.getY());
-                    frame.repaint();
                 }
+                repaint();
             }
         });
 
