@@ -1,17 +1,22 @@
 package com.company;
 
 public class QuoteExpression implements Expression {
-    String quote;
+    private Expression left;
+    private Expression right;
+    private String quote;
 
-    public QuoteExpression(String quote) {
+    public QuoteExpression(Expression left, Expression right, String quote) {
+        this.left = left;
+        this.right = right;
         this.quote = quote;
     }
 
     @Override
     public String interpret() {
         if(quote.equals("”"))
-            return "»";
-        else
-            return "«";
+            return left.interpret() + "»" + right.interpret();
+        if (quote.equals("“"))
+            return left.interpret() + "«" + right.interpret();
+        return left.interpret() + quote + right.interpret();
     }
 }

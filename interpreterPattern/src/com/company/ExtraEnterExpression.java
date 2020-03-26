@@ -1,10 +1,10 @@
 package com.company;
 
-public class ManySpaceExpression implements Expression {
+public class ExtraEnterExpression implements Expression {
     private Expression left;
     private Expression right;
 
-    public ManySpaceExpression(Expression left, Expression right) {
+    public ExtraEnterExpression(Expression left, Expression right){
         this.left = left;
         this.right = right;
     }
