@@ -27,7 +27,7 @@ public class Main {
         Expression expression = context.evaluate(text);
         System.out.println("Введенный текст:");
         System.out.println(text);
-        System.out.println("********************************************");
+        System.out.println("********************************************\n");
         System.out.println("Исправленный текст:");
         System.out.println(expression.interpret());
     }

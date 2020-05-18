@@ -15,9 +15,11 @@ public class Decanat implements Observer {
         System.out.println(((Teacher)a).name + " обновил текущую успеваемость.");
     }
 
+
+
     public void checkTeachers(){
         for (Teacher a : teachers){
-            if (!a.isCreatedAcademicalPerformance()){
+            if (!a.isCreatedAcademicalPerformance() && a.isMustCreatePerformance){
                 System.out.println("\n!!!!!!!!!!!!!!!!\n"+((Teacher)a).name + " не обновил текущую успеваемость.");
             }
         }

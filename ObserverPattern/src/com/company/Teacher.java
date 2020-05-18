@@ -9,11 +9,14 @@ public class Teacher implements Observed {
     private boolean isCreatedAcademicalPerformance;
 
     public String name;
+    public boolean isMustCreatePerformance;
 
-    public Teacher(boolean isCreatedAcademicalPerformance, String name) {
+    public Teacher(boolean isCreatedAcademicalPerformance, String name, boolean isMust) {
         this.isCreatedAcademicalPerformance = isCreatedAcademicalPerformance;
         this.name = name;
+        this.isMustCreatePerformance = isMust;
     }
+
 
     public boolean isCreatedAcademicalPerformance() {
         return isCreatedAcademicalPerformance;
