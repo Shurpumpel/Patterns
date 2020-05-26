@@ -1,12 +1,10 @@
-package com.mygdx.game;
+package com.mygdx.game.LevelBuilders.LevelLogic;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
-
-import java.util.LinkedList;
 
 public class Player extends Ship implements Shooter{
     private static Player instance;
@@ -17,9 +15,9 @@ public class Player extends Ship implements Shooter{
     private Player(){
         pos = new Vector2(150, 50);
         img = new Texture("Player.png");
-        HP = 10;
-        width = 80;
-        height = 55;
+        HP = 100;
+        width = 40;
+        height = 45;
     }
 
     public static Player getInstance() {
@@ -51,7 +49,7 @@ public class Player extends Ship implements Shooter{
         }
         
         if(Gdx.input.isKeyJustPressed(Input.Keys.SPACE)){
-            MyGdxGame.playerLasers.add(makeShot());
+            Level.playerLasers.add(makeShot());
         }
 
     }

@@ -1,4 +1,4 @@
-package com.mygdx.game;
+package com.mygdx.game.LevelBuilders.LevelLogic;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Vector2;

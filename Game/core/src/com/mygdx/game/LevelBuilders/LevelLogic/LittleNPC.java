@@ -1,4 +1,4 @@
-package com.mygdx.game;
+package com.mygdx.game.LevelBuilders.LevelLogic;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -11,7 +11,7 @@ public class LittleNPC extends NPC implements Shooter{
         this.img = new Texture("npc2.png");
         this.HP = hp;
         this.pos = pos;
-        this.timeSinceLastShot = 10;
+        this.timeSinceLastShot = 20;
         this.speed = 2;
         this.width = 59;
         this.height = 60;
@@ -29,8 +29,8 @@ public class LittleNPC extends NPC implements Shooter{
             pos.y = 550;
         }
 
-        if(timeSinceLastShot - timeBetweenShots >= 0){
-            MyGdxGame.enemyLasers.add(makeShot());
+        if((timeSinceLastShot - timeBetweenShots >= 0) && pos.y <=400){
+            Level.enemyLasers.add(makeShot());
             timeSinceLastShot = 0;
         }else {
             timeSinceLastShot += 1;

@@ -21,8 +21,8 @@ public class Background {
     private int speed;
     private BGPicture[] bgPictures;
 
-    public Background(){
-        speed = 5;
+    public Background(int speed){
+        this.speed = speed;
         bgPictures = new BGPicture[2];
         bgPictures[0] = new BGPicture(new Vector2(0,0));
         bgPictures[1] = new BGPicture(new Vector2(0,500));
@@ -43,5 +43,9 @@ public class Background {
             bgPictures[0].position.y = 0;
             bgPictures[1].position.y = 500;
         }
+    }
+
+    public void setSpeed(int speed){
+        this.speed = speed;
     }
 }

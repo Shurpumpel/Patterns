@@ -1,4 +1,4 @@
-package com.mygdx.game;
+package com.mygdx.game.LevelBuilders.LevelLogic;
 
 public interface Shooter {
     Lazer makeShot();

@@ -1,4 +1,4 @@
-package com.mygdx.game;
+package com.mygdx.game.LevelBuilders.LevelLogic;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -40,8 +40,8 @@ public class BigNPC extends NPC implements Shooter{
             pos.x += speed;
         }
 
-        if(timeSinceLastShot - timeBetweenShots >= 0){
-            MyGdxGame.enemyLasers.add(makeShot());
+        if((timeSinceLastShot - timeBetweenShots >= 0)&& pos.y<=400){
+            Level.enemyLasers.add(makeShot());
             timeSinceLastShot = 0;
         }else {
             timeSinceLastShot += 1;
