@@ -20,7 +20,7 @@ public class MainMenu implements Screen {
     public MainMenu(MyGdxGame game) {
         batch = new SpriteBatch();
         this.background = new Background(3);
-        this.playButton = new Texture("play_but.png");
+        this.playButton = new Texture("play_but_not_pushed.png");
         this.playButtonPushed = new Texture("play_but_pushed.png");
         this.game = game;
     }

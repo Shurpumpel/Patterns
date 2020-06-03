@@ -6,9 +6,9 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.mygdx.game.LevelBuilders.LevelBuilder;
-import com.mygdx.game.LevelBuilders.LevelLogic.Level;
 import com.mygdx.game.LevelBuilders.LevelLogic.Player;
 import com.mygdx.game.LevelBuilders.LevelOneBuilder;
+import com.mygdx.game.LevelBuilders.LevelTwoBuilder;
 
 public class LevelMenu implements Screen {
     private Background background;
@@ -16,6 +16,8 @@ public class LevelMenu implements Screen {
     private MyGdxGame game;
     private final Texture level1NotPushedButton;
     private final Texture level1PushedButton;
+    private final Texture level2NotPushedButton;
+    private final Texture level2PushedButton;
     private LevelBuilder levelBuilder;
     int level1ButtonWidth = 100;
     int level1ButtonHeight = 40;
@@ -26,6 +28,8 @@ public class LevelMenu implements Screen {
         this.batch = batch;
         this.level1NotPushedButton = new Texture("lvl1_not_pushed.png");
         this.level1PushedButton = new Texture("lvl1_pushed.png");
+        this.level2NotPushedButton = new Texture("lvl2_not_pushed.png");
+        this.level2PushedButton = new Texture("lvl2_pushed.png");
         this.game = game;
         this.typeOfPlayerShip = player;
     }
@@ -49,7 +53,18 @@ public class LevelMenu implements Screen {
             }
         }else{
             batch.draw(level1NotPushedButton, 150, 250, level1ButtonWidth, level1ButtonHeight);
+        }
 
+        if(Gdx.input.getX()>150 && Gdx.input.getX()<150+ level1ButtonWidth &&
+                Gdx.input.getY()<310 && Gdx.input.getY()>310- level1ButtonHeight) {
+            batch.draw(level2PushedButton, 150, 190, level1ButtonWidth, level1ButtonHeight);
+            if(Gdx.input.isButtonJustPressed(Input.Buttons.LEFT)){
+                createLevel(new LevelTwoBuilder(), typeOfPlayerShip);
+                this.dispose();
+                game.setScreen(levelBuilder.getLevel());
+            }
+        }else{
+            batch.draw(level2NotPushedButton, 150, 190, level1ButtonWidth, level1ButtonHeight);
         }
         batch.end();
     }

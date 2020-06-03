@@ -8,9 +8,9 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
-import com.mygdx.game.Background;
 import com.mygdx.game.MainMenu;
 import com.mygdx.game.MyGdxGame;
+import com.mygdx.game.Background;
 
 import java.util.LinkedList;
 import java.util.ListIterator;
@@ -23,7 +23,11 @@ public class Level implements Screen {
     static LinkedList<Lazer> enemyLasers = new LinkedList<>();
     boolean gameOver = false;
     LinkedList<Ship> enemyShips;
-    Texture restartButton;
+    Texture restartButtonNotPushed;
+    Texture restartButtonPushed;
+    int restartButtonWidth;
+    int restartButtonHeight;
+    Vector2 restartButtonPos = new Vector2(100, 250);
     static BitmapFont font;
     Texture heartPicture;
     Texture winnerPicture;
@@ -35,10 +39,13 @@ public class Level implements Screen {
     public Level(SpriteBatch batch, MyGdxGame game, Player player) {
         this.gameOver = false;
         this.enemyShips = new LinkedList<>();
-        this.restartButton = new Texture("restartButton.png");
+        this.restartButtonNotPushed = new Texture("Restart_not_pushed.png");
+        this.restartButtonPushed = new Texture("Restart_pushed.png");
+        this.restartButtonHeight = 55;
+        this.restartButtonWidth = 145;
         this.heartPicture = new Texture("heart.png");
-        this.winnerPicture =  new Texture("winner.png");
-        this.loserPicture = new Texture("loser.png");
+        this.winnerPicture =  new Texture("you_win.png");
+        this.loserPicture = new Texture("you_lose.png");
         this.countOfEnemies = enemyShips.size();
         this.batch = batch;
         this.background = new Background(1);
@@ -54,10 +61,10 @@ public class Level implements Screen {
 
     @Override
     public void render(float delta) {
-        update();
         Gdx.gl.glClearColor(1,1,1, 0.5f);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         batch.begin();
+        update();
         background.render(batch);
 
         if(!gameOver) {
@@ -79,8 +86,18 @@ public class Level implements Screen {
             }else{
                 batch.draw(loserPicture, 100,350);
             }
-            batch.draw(restartButton, 100, 250);
-        }
+            if (Gdx.input.getX() > restartButtonPos.x && Gdx.input.getX() < restartButtonPos.x + restartButtonWidth &&
+                    Gdx.input.getY() < restartButtonPos.y && Gdx.input.getY() > restartButtonPos.y - restartButtonHeight) {
+                batch.draw(restartButtonPushed, restartButtonPos.x, restartButtonPos.y);
+                if (Gdx.input.isButtonJustPressed(Input.Buttons.LEFT)) ;
+                {
+                    this.gameOver = false;
+                    restart();
+                }
+            }else{
+                batch.draw(restartButtonNotPushed, restartButtonPos.x, restartButtonPos.y);
+            }
+       }
 
         batch.end();
     }
@@ -88,10 +105,6 @@ public class Level implements Screen {
     public void update(){
         background.update();
         countOfEnemies = enemyShips.size();
-        if(Gdx.input.isKeyPressed(Input.Keys.SPACE) && gameOver) {
-            this.gameOver = false;
-            restart();
-        }
 
         if(Gdx.input.isKeyJustPressed(Input.Keys.ENTER)){
             this.shipChooseContext.ChangeShip();
@@ -101,7 +114,7 @@ public class Level implements Screen {
             ship.update();
         }
 
-        shipChooseContext.playerShip.update();
+         shipChooseContext.playerShip.update();
         if(shipChooseContext.playerShip.HP <= 0 || countOfEnemies == 0){
             gameOver = true;
         }
