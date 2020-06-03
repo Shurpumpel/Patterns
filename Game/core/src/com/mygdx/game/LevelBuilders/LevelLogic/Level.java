@@ -89,7 +89,7 @@ public class Level implements Screen {
             if (Gdx.input.getX() > restartButtonPos.x && Gdx.input.getX() < restartButtonPos.x + restartButtonWidth &&
                     Gdx.input.getY() < restartButtonPos.y && Gdx.input.getY() > restartButtonPos.y - restartButtonHeight) {
                 batch.draw(restartButtonPushed, restartButtonPos.x, restartButtonPos.y);
-                if (Gdx.input.isButtonJustPressed(Input.Buttons.LEFT)) ;
+                if (Gdx.input.isButtonJustPressed(Input.Buttons.LEFT))
                 {
                     this.gameOver = false;
                     restart();
