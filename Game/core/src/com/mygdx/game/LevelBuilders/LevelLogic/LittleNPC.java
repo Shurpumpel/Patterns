@@ -40,7 +40,7 @@ public class LittleNPC extends NPC implements Shooter{
 
     @Override
     public Lazer makeShot() {
-        return new OrangeLaser(new Vector2(pos.x, pos.y));
+        return new YellowLaser(new Vector2(pos.x, pos.y));
     }
 
 }

@@ -6,26 +6,17 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 
-public class Player extends Ship implements Shooter{
-    private static Player instance;
-
-    private int speed = 5;
+public abstract class Player extends Ship implements Shooter{
+    protected int speed;
 
 
-    private Player(){
+    public Player(){
         pos = new Vector2(150, 50);
-        img = new Texture("Player.png");
-        HP = 100;
+        HP = 10;
         width = 40;
         height = 45;
     }
 
-    public static Player getInstance() {
-        if(instance==null){
-            instance = new Player();
-        }
-        return instance;
-    }
 
     public void render(SpriteBatch batch){
         batch.draw(img, pos.x, pos.y);
@@ -54,8 +45,9 @@ public class Player extends Ship implements Shooter{
 
     }
 
-    @Override
-    public Lazer makeShot() {
-        return new BlueLaser(new Vector2(pos.x, pos.y));
-    }
+    public abstract void setShipTexture();
+    public abstract void setSpeedOfShip();
+    public abstract void changeShip(PlayerShipChooseContext context);
+
+    public abstract Lazer makeShot();
 }

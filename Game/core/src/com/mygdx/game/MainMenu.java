@@ -5,16 +5,17 @@ import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.mygdx.game.LevelBuilders.ChooseShipMenu;
 
 public class MainMenu implements Screen {
     SpriteBatch batch;
-    private Texture playButton;
-    private Texture playButtonPushed;
+    private final Texture playButton;
+    private final Texture playButtonPushed;
     private int playButtonWidth = 90;
     private int playButtonHeight = 50;
     private MyGdxGame game;
 
-    private Background background;
+    private final Background background;
 
     public MainMenu(MyGdxGame game) {
         batch = new SpriteBatch();
@@ -39,7 +40,7 @@ public class MainMenu implements Screen {
             batch.draw(playButtonPushed, 150, 250, playButtonWidth, playButtonHeight);
             if(Gdx.input.isButtonJustPressed(Input.Buttons.LEFT)){
                 this.dispose();
-                game.setScreen(new LevelMenu(background, batch, game));
+                game.setScreen(new ChooseShipMenu(background, batch, game));
             }
 
         }else{

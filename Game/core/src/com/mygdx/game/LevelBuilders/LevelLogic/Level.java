@@ -9,6 +9,8 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.mygdx.game.Background;
+import com.mygdx.game.MainMenu;
+import com.mygdx.game.MyGdxGame;
 
 import java.util.LinkedList;
 import java.util.ListIterator;
@@ -17,7 +19,6 @@ public class Level implements Screen {
 
     SpriteBatch batch;
     Background background;
-    Player player;
     static LinkedList<Lazer> playerLasers = new LinkedList<>();
     static LinkedList<Lazer> enemyLasers = new LinkedList<>();
     boolean gameOver = false;
@@ -28,9 +29,10 @@ public class Level implements Screen {
     Texture winnerPicture;
     Texture loserPicture;
     int countOfEnemies;
+    MyGdxGame game;
+    PlayerShipChooseContext shipChooseContext;
 
-    public Level(SpriteBatch batch) {
-        this.player = Player.getInstance();
+    public Level(SpriteBatch batch, MyGdxGame game, Player player) {
         this.gameOver = false;
         this.enemyShips = new LinkedList<>();
         this.restartButton = new Texture("restartButton.png");
@@ -40,7 +42,9 @@ public class Level implements Screen {
         this.countOfEnemies = enemyShips.size();
         this.batch = batch;
         this.background = new Background(1);
-        enemyShips.add(new LittleNPC(50, new Vector2(200, 600)));
+        this.game = game;
+        font = new BitmapFont();
+        this.shipChooseContext = new PlayerShipChooseContext(player);
     }
 
     @Override
@@ -58,11 +62,11 @@ public class Level implements Screen {
 
         if(!gameOver) {
             batch.draw(heartPicture, 20, 463);
-            //font.draw(batch, "x"+player.HP, 40, 480);
+            font.draw(batch, "x"+shipChooseContext.playerShip.HP, 40, 480);
             for(Ship ship : enemyShips){
                 ship.render(batch);
             }
-            player.render(batch);
+            shipChooseContext.playerShip.render(batch);
             for(Lazer laser : enemyLasers){
                 laser.render(batch);
             }
@@ -89,12 +93,16 @@ public class Level implements Screen {
             restart();
         }
 
+        if(Gdx.input.isKeyJustPressed(Input.Keys.ENTER)){
+            this.shipChooseContext.ChangeShip();
+        }
+
         for(Ship ship: enemyShips){
             ship.update();
         }
 
-        player.update();
-        if(player.HP <= 0 || countOfEnemies == 0){
+        shipChooseContext.playerShip.update();
+        if(shipChooseContext.playerShip.HP <= 0 || countOfEnemies == 0){
             gameOver = true;
         }
 
@@ -116,7 +124,11 @@ public class Level implements Screen {
             for(Ship ship : enemyShips){
                 if(ship.intersects(laser.getBounds())){
                     ship.HP -= laser.power;
-                    iterator.remove();
+                    try {
+                        iterator.remove();
+                    }catch (IllegalStateException e){
+                        continue;
+                    }
                 }
             }
         }
@@ -125,9 +137,13 @@ public class Level implements Screen {
         iterator = enemyLasers.listIterator();
         while (iterator.hasNext()){
             Lazer laser = iterator.next();
-            if(player.intersects(laser.getBounds())){
-                player.HP -= laser.power;
-                iterator.remove();
+            if(shipChooseContext.playerShip.intersects(laser.getBounds())){
+                shipChooseContext.playerShip.HP -= laser.power;
+                try{
+                    iterator.remove();
+                }catch (IllegalStateException e){
+                    continue;
+                }
             }
         }
 
@@ -160,12 +176,8 @@ public class Level implements Screen {
     }
 
     public void restart(){
-        enemyShips.clear();
-        countOfEnemies = 0;
-        enemyShips.add(new LittleNPC(3, new Vector2(30, 400)));
-        enemyShips.add(new BigNPC(3, new Vector2(20, 300)));
-        player = Player.getInstance();
-        player.HP = 10;
+        this.dispose();
+        game.setScreen(new MainMenu(game));
     }
 
 
